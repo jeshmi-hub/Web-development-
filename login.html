@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kaldiable-The Life of Barista</title>
+	<link rel ="stylesheet" type="text/css" href="css/login.css">
+	<link rel ="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+	<div class="logo">
+		<img src="images/Group 9.svg">
+	</div>
+
+	<div class="container">
+		<div class="image">
+			<img src="images//coffee.jfif">
+		</div>
+
+
+		<form action="#" class="Register-box" id="login">
+			<div class="form-data">
+
+				<h2>Login Form</h2>
+
+				<div class="box">
+					<input  type="text" id="name1" required>
+					<label>Username</label>
+					<i class="fas fa-user"></i>
+					<span></span>
+
+				</div>
+
+
+				<div class="box">
+					<input  type="password" id="pass1" required>
+					<label>Password</label>
+					<i class="fas fa-lock"></i>
+					<span></span>
+
+				</div>
+
+				<div class="btn">
+				<button onclick="login()"><a href="home.html">Login</a></button>
+				<p class="message">Make sure to register!!<a href="#" onclick="toggle()">Register</a></p>
+				</div>
+			
+				
+				
+				
+
+			</div>
+		</form>
+
+		<form action="#" class="Register-box" id="register">
+			<div class="form-data">
+
+				<h2>Registration Form</h2>
+
+				<div class="box">
+					<input  type="text" id="name" required>
+					<label>Username</label>
+					<i class="fas fa-user"></i>
+					<span></span>
+
+				</div>
+
+				<div class="box">
+					<input  type="text" id="email" required>
+					<label>Email</label>
+					<i class="fas fa-envelope"></i>
+					<span></span>
+
+				</div>
+
+				<div class="box">
+					<input  type="password" id="pass" required>
+					<label>Password</label>
+					<i class="fas fa-lock"></i>
+					<span></span>
+
+				</div>
+
+				<div class="box">
+					<input  type="password" id="repass" required>
+					<label>Re-Enter Password</label>
+					<i class="fas fa-lock"></i>
+					<span></span>
+
+				</div>
+				<div class="btn">
+					<button onclick="register()">Register</button>
+			
+				<p class="message1">Already Registered? <a href="#" onclick="toggle()">Login</a></p>
+
+				</div>
+
+				
+
+			</div>
+		</form>
+
+		
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$('#register').hide()
+		function toggle(){
+			$('#login').toggle()
+			$('#register').toggle()
+		}
+
+
+		function register(){
+			const name = document.getElementById('name').value
+			const pass = document.getElementById('pass').value
+			const repass = document.getElementById('repass').value
+			const email = document.getElementById('email').value
+		if(!localStorage.getItem(name)){
+		if(pass==repass){
+			localStorage.setItem(name,pass)
+			alert('registered!! please login')
+			toggle()
+		}
+		else{
+			alert('password does not match')
+		}
+	}
+	else{
+		alert('user exists')
+		}
+	}
+
+
+	function login(){
+		const name = document.getElementById('name1').value
+		const pass = document.getElementById('pass1').value
+		if(localStorage.getItem(name)){
+			console.log(name)
+			var x = localStorage.getItem(name)
+		if(pass==x){
+			location.href = 'About us.html'		
+		}
+		else{
+			alert('password incorrect')
+		}
+	}
+	else{
+		alert('user does not exists')
+		}
+	
+	}
+
+	</script>
+	
+</body>
+</html>

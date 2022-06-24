@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav-bar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 71px;
+    background: #D7D3CE;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.nav-logo img{
+    width: 135px;
+    padding : 10px 80px;
+}
+
+.nav-links{
+    flex: 1;
+}
+
+.nav-links ul{
+    margin-left: -80px;
+    display: inline;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 25px 15px;
+    margin-left: 45px;
+}
+
+.nav-links ul a{
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;;
+}
+
+.btn{
+    padding: 10px 20px;
+    border: 0;
+    background: #C4C4C4;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    position: absolute;
+    top: 18px;
+    left: 1200px;
+    overflow: hidden;
+}
+
+.btn:hover{
+    background-color: white;
+}
+
+
+.btn-toggle-nav {
+    width: 60px;
+    height: 100%;
+    background-color: #CC9759;
+    background-image: url('../images/icon.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+    cursor: pointer;
+    right: 0px;
+}
+
+.btn-toggle-nav:hover {
+   opacity: 0.5;
+}
+
+.nav-sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: calc(100vh - 60px);
+    padding: 0px 5px;
+    background-color: #1b1b1b;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    top:71px;
+}
+
+.nav-sidebar ul {
+    padding-top: 15px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.nav-sidebar ul li {
+    line-height: 60px;
+    list-style: none;
+}
+
+.nav-sidebar ul li span, .nav-sidebar ul li a {
+    display: block;
+    height: 60px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Roboto Condensed';
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+ .nav-sidebar ul li a:hover{
+   background-color: #222;
+
+}
+
+.social{
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 1200px;
+    top: 705px;
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+   position: relative;
+   display: inline-block;
+   margin-right: 15px;
+   width: 50px;
+   height: 50px; 
+   background: rgba(230,177,115,1);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.2s ease-in-out;
+}
+
+.social li a img{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+.social li a:hover{
+    background-color: #fff;
+    transform: translateY(-10px);
+}
+
+.Quotes{
+    height: 112vh;
+    background-image: url(../images/pexels-tim-douglas-6205738.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+ }
+ 
+ .Quotes h1{
+     font-size: 2rem;
+     color: #fff;
+ }
+ 
+ .Quotes p{
+     color: #fff;
+     font-size: 1.3rem;
+ }
+
+ .middle{
+	width: 70%;
+	height: 730px;
+	margin-left: 18%;
+	margin-top: 1%;
+	box-shadow: 0 5px 38px rgba(230,177,115,1);
+	background: linear-gradient(0deg, rgba(0,0,0,09) 50%, transparent);
+    background-image: url(../images/pexels-ketut-subiyanto-4350057.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.middle h2{
+  color: #fff;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.more{
+	color: #000;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+.more img{
+	height: 140px;
+	width: 12%;
+	padding:10px;
+	margin-top: -1%;
+	transition: .5s;
+	margin-left: 4%;
+}
+
+.more img:hover{
+	transform: scale(1.05);
+	box-shadow: 0 5px 8px #D7D3CE;
+}
+
+.footer{
+    height: 3vh;
+}

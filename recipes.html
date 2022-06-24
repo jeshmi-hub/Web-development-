@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaldiable-The Life of Barista</title>
+    <link rel ="stylesheet" type="text/css" href="css/recipe.css">
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="btn-toggle-nav" onclick="toggleNav()"></div>
+        <div class="nav-logo">
+            <img src="images/Group 9.svg" alt="logo">
+        </div>
+        <nav class="nav-links">
+           
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="recipes.html">Techniques</a></li>
+                    <li><a href="beverage.html">Recipes</a></li>
+                    <li><a href="equipments.html">Equipments</a></li>
+            </ul>
+            <a href="login.html"><button type="button" class="btn">SIGN UP</button></a>
+        </nav>
+    </div>
+
+    <aside class="nav-sidebar">
+        
+        <ul>
+            <li><span>Kaldiable</span></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About us.html">About Us</a></li>
+            <li><a href="recipes.html">Techniques</a></li>
+            <li><a href="beverage.html">Recipes</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+        </ul>
+    </aside>
+
+    <script src="./js/nav.js"></script>
+
+    <div class="slider-box">
+        <div id="slider">
+            <img src="images/pexels-tim-douglas-6205471.jpg" alt="pexels-tim-douglas-6205471">
+            <img src="images/Desktop - 2.svg" alt="Desktop - 2">
+            <img src="images/Desktop - 1.svg" alt="Desktop - 1">
+            <img src="images/Desktop - 3.svg" alt="Desktop - 3">
+            <img src="images/Desktop - 4.svg" alt="Desktop - 4">
+            <img src="images/Desktop - 5.svg" alt="Desktop - 5">
+            <img src ="images/pexels-tim-douglas-6205475.jpg" alt="pexels-tim-douglas-6205475">
+        </div>
+
+        <div class="indicators">
+            <span id="btn1"></span>
+            <span id="btn2"></span>
+            <span id="btn3"></span>
+            <span id="btn4"></span>
+            <span id="btn5"></span>
+            <span id="btn6"></span>
+            <span id="btn7"></span>
+
+        </div>
+
+    </div>
+
+    <ul class="social">
+        <li><a href="https://www.facebook.com/HJBARISTASCHOOL"><img src="images/facebook-square-brands.svg" alt="facebook-square-brands"></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/baristadiary/?hl=en"><img src="images/instagram-square-brands.svg" alt="instagram-square-brands"></a></li>
+        <li><a href="https://www.pinterest.com/baristalife/_saved/"><img src="images/pinterest-square-brands.svg" alt="pexels-tim-douglas-6205475"></a></li>
+        <li><a href="https://twitter.com/TheCoffeeBean"><img src="images/twitter-square-brands.svg" alt="twitter-square-brands"></a></li>
+    </ul>
+    
+
+    <script>
+        var slide = document.getElementById("slider");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var btn5 = document.getElementById("btn5");
+        var btn6 = document.getElementById("btn6");
+        var btn7 = document.getElementById("btn7");
+
+
+        btn1.onclick = function(){
+            slide.style.transform = "translateX(0px)";
+        }
+
+        btn2.onclick = function(){
+            slide.style.transform = "translateX(-100%)";
+        }
+
+        btn3.onclick = function(){
+            slide.style.transform = "translateX(-200%)";
+        }
+
+        btn4.onclick = function(){
+            slide.style.transform = "translateX(-300%)";
+        }
+
+        btn5.onclick = function(){
+            slide.style.transform = "translateX(-400%)";
+        }
+
+        btn6.onclick = function(){
+            slide.style.transform = "translateX(-500%)";
+        }
+
+        btn7.onclick = function(){
+            slide.style.transform = "translateX(-600%)";
+        }
+
+
+    </script>
+    
+</body>
+</html>
